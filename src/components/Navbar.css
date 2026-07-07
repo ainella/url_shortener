@@ -1,0 +1,63 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  
+  /* This makes the navbar stick to the top of the screen */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.navbar-icon {
+  color: #3b82f6;
+  margin-right: 10px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Spaces out the links */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.navbar-links a:hover {
+  color: #3b82f6;
+}
+
+/* Special styling for the GitHub button */
+.github-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #1f2937;
+  color: white !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.github-btn:hover {
+  background-color: #000000;
+}
