@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { FaExternalLinkAlt, FaTrash } from 'react-icons/fa'
+import { BACKEND_URL } from '../constants'
 
 function Links() {
   const [history, setHistory] = useState([])
@@ -13,7 +14,7 @@ function Links() {
 
     try {
       // 2. Send the DELETE request to FastAPI
-      const response = await fetch(`http://127.0.0.1:8000/${shortCode}`, {
+      const response = await fetch(`${BACKEND_URL}/${shortCode}`, {
         method: 'DELETE',
       });
 
@@ -35,7 +36,7 @@ function Links() {
     // We create an async function to fetch the data
     const fetchUrls = async () => {
       try {
-        const response = await fetch('http://127.0.0.1:8000/urls/', {
+        const response = await fetch(`${BACKEND_URL}/urls/`, {
             method: 'GET',
             headers: { 'Content-Type': 'application/json' },
         });
@@ -91,8 +92,8 @@ function Links() {
                   {item.display_name || "Unnamed Link"} 
                 </div>
 
-                <a href={`http://127.0.0.1:8000/${item.short_code}`} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '1rem' }}>
-                  http://127.0.0.1:8000/{item.short_code} <FaExternalLinkAlt size={12} />
+                <a href={`${BACKEND_URL}/${item.short_code}`} target="_blank" rel="noopener noreferrer" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '1rem' }}>
+                  {BACKEND_URL}/{item.short_code} <FaExternalLinkAlt size={12} />
                 </a>
               </div>
 

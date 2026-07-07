@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Links from './components/Links' 
 import './App.css'
+import { BACKEND_URL } from './constants'
 
 function App() {
   const [targetUrl, setTargetUrl] = useState('')
@@ -18,7 +19,7 @@ function App() {
     setShortUrl('')
 
     try {
-      const response = await fetch('http://127.0.0.1:8000/url', {
+      const response = await fetch(`${BACKEND_URL}/url`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ 
@@ -34,7 +35,7 @@ function App() {
       }
 
       const data = await response.json()
-      const finalShortUrl = `http://127.0.0.1:8000/${data.short_code}`
+      const finalShortUrl = `${BACKEND_URL}/${data.short_code}`
 
       setShortUrl(finalShortUrl)
 
