@@ -74,7 +74,7 @@ function Links() {
   return (
     <div className="container">
       <div className="card" style={{ maxWidth: '600px' }}>
-        <h1>Server URL History</h1>
+        <h1>Short Links History</h1>
         <p className="subtitle">All URLs currently saved in the database</p>
 
         {isLoading && <p>Loading data from server...</p>}
