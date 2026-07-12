@@ -6,3 +6,10 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
+    networks:
+      - https_network
+
+networks:
+  https_network:
+    name: ${HTTPS_NETWORK}
+    external: true
