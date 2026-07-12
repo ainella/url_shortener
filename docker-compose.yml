@@ -1,7 +1,7 @@
 services:
   frontend:
     build: .
-    container_name: shorty_url_backend
+    container_name: shorty_url_frontend
     ports:
       - "${PORT}:5173"
     volumes:
