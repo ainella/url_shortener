@@ -2,6 +2,8 @@
 
 This is a URL shortener service. It is built with React and Vite.
 
+[Frontend Demo](shortyurl.ainella.com)
+
 ![Demo](https://i.imgur.com/cFDJqL8.png)
 
 ![Demo2](https://i.imgur.com/L2y5ebT.png)
