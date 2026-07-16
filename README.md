@@ -2,7 +2,7 @@
 
 This is a URL shortener service. It is built with React and Vite.
 
-[Frontend Demo](shortyurl.ainella.com)
+[Frontend Demo](https://shortyurl.ainella.com)
 
 ![Demo](https://i.imgur.com/cFDJqL8.png)
 
