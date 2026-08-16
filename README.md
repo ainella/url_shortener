@@ -22,7 +22,7 @@ This is a URL shortener service. It is built with React and Vite.
 Before you begin, ensure you have the following installed on your machine:
 
 * [Node.js](https://nodejs.org/) (v16 or higher recommended)
-* [Backend](https://gitlab.com/ainella/url-shortener/backend) set up
+* [Backend](https://github.com/ainella/url_shortener_backend) set up
 
 ### Installation
 
